@@ -6112,10 +6112,10 @@ mkdirp@0.x, "mkdirp@>=0.5 0", mkdirp@^0.5.0, mkdirp@^0.5.1, mkdirp@~0.5.0, mkdir
   dependencies:
     minimist "0.0.8"
 
-mobx-music@^1.1.0:
-  version "1.1.0"
-  resolved "https://registry.npmjs.org/mobx-music/-/mobx-music-1.1.0.tgz#1707f46dfd587ec7144c78b885b1deb87f5a4ab7"
-  integrity sha512-EnFj93OhKVt1gsbOAHsaGGWkPS2ZUC1srZnyAgS8zs3TodkrikkfEeTPlmXOSvgvw4CzRCdes4dkUcX+gqTUcQ==
+mobx-music@^1.1.1:
+  version "1.1.1"
+  resolved "https://registry.npmjs.org/mobx-music/-/mobx-music-1.1.1.tgz#6ea63af933b2f34191af0215dab4a34f3d3b11a3"
+  integrity sha512-Rp5t4mlxJW4Lm5Z85G/rAdpgKnP8aH5v3u03dEaHA6aIVFPIPxNlx5+FeyDdt+iflfXbAO1N2IJVNyuQIbWUjw==
   dependencies:
     soundfont-player danigb/soundfont-player
 

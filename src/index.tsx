@@ -1,11 +1,27 @@
 import * as React from "react";
-import { getInstruments, InstrumentName } from "mobx-music";
+import {
+  getInstruments,
+  InstrumentName,
+  PlayingNotesMap,
+  InstrumentsMap
+} from "mobx-music";
 import { renderAndAddProps } from "render-and-add-props";
 export * from "mobx-music";
+
 export type ReactMobxMusicProps = {
   instrumentNames: InstrumentName[];
+  children: (state: ReactMobxMusicState) => any;
 };
-export class ReactMobxMusic extends React.Component<ReactMobxMusicProps> {
+
+export type ReactMobxMusicState = {
+  isLoading: boolean;
+  instruments?: InstrumentsMap;
+  playingNotes?: PlayingNotesMap;
+};
+export class ReactMobxMusic extends React.Component<
+  ReactMobxMusicProps,
+  ReactMobxMusicState
+> {
   state = {
     isLoading: true
   };
@@ -36,7 +52,6 @@ export class ReactMobxMusic extends React.Component<ReactMobxMusicProps> {
   }
   render() {
     const { children } = this.props;
-    console.warn(this.state.isLoading);
     return renderAndAddProps(children, this.state);
   }
 }

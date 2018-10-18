@@ -1,6 +1,5 @@
 import * as ReactDOM from "react-dom";
 import * as React from "react";
-import { getInstrumentNames } from "mobx-music";
 import ReactMobxMusic from "../src/";
 
 export const App = () => {
