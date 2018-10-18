@@ -15,15 +15,17 @@ export type ReactMobxMusicProps = {
 
 export type ReactMobxMusicState = {
   isLoading: boolean;
-  instruments?: InstrumentsMap;
-  playingNotes?: PlayingNotesMap;
+  instruments: InstrumentsMap;
+  playingNotes: PlayingNotesMap;
 };
 export class ReactMobxMusic extends React.Component<
   ReactMobxMusicProps,
   ReactMobxMusicState
 > {
   state = {
-    isLoading: true
+    isLoading: true,
+    instruments: new Map() as ReactMobxMusicState["instruments"],
+    playingNotes: new Map() as ReactMobxMusicState["playingNotes"]
   };
   async componentDidMount() {
     const { instruments, playingNotes } = await getInstruments(
