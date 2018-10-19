@@ -12,7 +12,7 @@ yarn add react-mobx-music
 <ReactMobxMusic instrumentNames={["accordion"]}>
   {({ isLoading, instruments }) =>
     isLoading ? (
-      <div>Oh hasdai {isLoading}</div>
+      <div> Loading </div>
     ) : (
       <div>
         Loaded !
