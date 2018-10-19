@@ -1,10 +1,33 @@
-## TypeScript React Component
+## React Mobx Music
 
-```
-git clone https://github.com/ts-bps/ts-react-component my-ts-react-component
-cd my-ts-react-component
-rm -rf .git
-yarn
-yarn start
+### Install
+
+```sh
+yarn add react-mobx-music
 ```
 
+### Usage
+
+```jsx
+<ReactMobxMusic instrumentNames={["accordion"]}>
+  {({ isLoading, instruments }) =>
+    isLoading ? (
+      <div>Oh hasdai {isLoading}</div>
+    ) : (
+      <div>
+        Loaded !
+        <button
+          onMouseDown={() => {
+            instruments.get("accordion").play("A4");
+          }}
+          onMouseUp={() => {
+            instruments.get("accordion").stop("A4");
+          }}
+        >
+          Play A4
+        </button>
+      </div>
+    )
+  }
+</ReactMobxMusic>
+```
