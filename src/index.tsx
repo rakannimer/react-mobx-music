@@ -33,6 +33,7 @@ export class ReactMobxMusic extends React.Component<
     );
     this.setState({ isLoading: false, instruments, playingNotes });
   }
+
   async componentDidUpdate(prevProps: ReactMobxMusicProps) {
     if (prevProps.instrumentNames === this.props.instrumentNames) {
       return;
